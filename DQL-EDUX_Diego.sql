@@ -34,6 +34,10 @@ SELECT SUM(Curtida) AS TotalCurtidas
 FROM Post
 WHERE IdUsuario=1;
 
+/* Outra forma de fazer a contagem dos objetivos alcançados por determinado aluno a partir de seu ID :*/
+SELECT COUNT (*) AS Alcancados FROM ObjetivoAluno 
+WHERE IdAlunoTurma = 1 AND Nota IS NOT NULL;
+
 -- Seleciona e imprime todas as categorias dos objetivos, seu prazos de entrega e sua descrição através do RIGHT JOIN :
 SELECT
 		Categoria.Titulo,
